@@ -92,6 +92,7 @@ body {
   justify-content: space-between;
   align-items: center;
   transition: width 0.5s, left 0.5s;
+  z-index: 1;
 }
 
 .main .topbar.active {
@@ -117,4 +118,95 @@ body {
   align-items: center;
   font-size: 24px;
   color: var(--black);
+}
+
+section {
+  position: relative;
+  min-height: 100vh;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.banner .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.banner .imgBox {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.banner .imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h3 {
+  position: relative;
+  font-size: 1.4em;
+  color: var(--black);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+p {
+  color: #777;
+}
+
+.btn {
+  position: relative;
+  padding: 10px 30px;
+  background: var(--black);
+  color: var(--white);
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.socialMedia {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+}
+
+.socialMedia li {
+  list-style: none;
+}
+
+.socialMedia li a {
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.05);
+  font-size: 24px;
+  margin: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--black);
+  transition: 0.4s ease;
+}
+
+
+.socialMedia li a:hover {
+  background: var(--black);
+  color: var(--white);
 }
