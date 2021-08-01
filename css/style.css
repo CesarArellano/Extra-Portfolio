@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -210,3 +211,53 @@ p {
   background: var(--black);
   color: var(--white);
 }
+
+.adjust {
+  position: relative;
+  min-height: 100vh;
+  padding: 0 40px;
+  padding-top: 80px;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+}
+
+.title h2 {
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.title h2::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 50px;
+  height: 1px;
+  background: var(--black);  
+}
+
+.about .content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.about .content .textBox {
+  width: 49%;
+}
+
+.about .content .imgBox {
+  margin-left: 40px;
+}
+
+.about .content .imgBox img {
+  max-width: 100%;
+}
+
