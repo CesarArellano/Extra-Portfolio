@@ -261,3 +261,267 @@ p {
   max-width: 100%;
 }
 
+.services .content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin: 40px 0;
+}
+
+.services .content .serviceBox {
+  border: 2px solid rgba(0, 0, 0, 0.05);
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.services .content .serviceBox img {
+  max-width: 50px;
+}
+
+.services .content .serviceBox h2 {
+  font-size: 1.1em;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: var(--black);
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.projects .content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin: 40px 0;
+}
+
+.projects .content .workBox {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.projects .content .workBox .imgBox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(0);
+  transition: 0.5s ease-in-out;
+}
+
+.projects .content .workBox .imgBox:hover {
+  transform: translateY(-100%);
+}
+
+.projects .content .workBox .imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.projects .content .workBox .textBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--black);
+  color: var(--white);
+  transform: translateY(100%);
+  transition: 0.5s ease-in-out;
+}
+
+.projects .content .workBox .textBox h3 {
+  color: var(--white);
+  font-size: 1em;
+}
+
+.projects .content .workBox:hover .textBox {
+  transform: translateY(0);
+}
+
+.certifications .content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin: 40px 0;
+}
+
+.certifications .content .certificationBox {
+  border: 2px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+}
+
+.certifications .content .certificationBox .imgBox {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.certifications .content .certificationBox .imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.certifications .content .certificationBox .imgBox p {
+  font-style: italic;
+}
+
+.certifications .content .certificationBox h4 {
+  text-align: right;
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1em;
+  line-height: 1.2em;
+  font-weight: 600;
+  border-right: 4px solid var(--black);
+  padding-right: 10px;
+}
+
+.certifications .content .certificationBox h4 span {
+  text-transform: initial;
+  color: #aaa;
+  letter-spacing: 1px;
+  font-weight: 300;
+  font-size: 0.7em;
+}
+
+.contact {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact .contactForm {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin-top: 20px;
+}
+
+.contact .contactForm .row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+
+.contact .contactForm .row2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.contact .contactForm .row input,
+.contact .contactForm .row2 textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  color: var(--black);
+  background: var(--white);
+  font-size: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.contact .contactForm .row2 textarea {
+  resize: none;
+  height: 200px;
+}
+
+.contact .contactForm .row2 input[type="submit"] {
+  background: var(--black);
+  color: var(--white);
+  padding: 10px 30px;
+  display: inline-block;
+  font-weight: 500;
+  letter-spacing: 2px;
+  cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+  max-width: 150px;
+  border: none;
+  border-radius: 5px;
+}
+
+.copyright { 
+  position: relative;
+  bottom: 0;
+  padding: 10px 40px;
+  text-align: center;
+}
+
+/* === Responsive === */
+
+@media (max-width: 992px) {
+  
+  .navigation {
+    left: -100%;
+  }
+
+  .navigation.active {
+    left: 0;
+    width: 100%;
+  }
+
+  .main {
+    width: 100%;
+    left: 0;
+  }
+
+  .main.active{
+    left: 100%;
+  }
+
+  .main .topbar {
+    width: 100%;
+    left: 0;
+    padding: 0 20px;
+  }
+  
+  .navigation ul {
+    padding: 20px;
+  }
+
+  .banner .imgBox {
+    width: 250px;
+    height: 250px;
+  }
+
+  .banner h3,
+  .banner p {
+    text-align: center;
+  }
+
+  .about .content {
+    flex-direction: column;
+  }
+
+  .about .content .textBox {
+    width: 100%;
+    min-width: 100%
+  }
+
+}
