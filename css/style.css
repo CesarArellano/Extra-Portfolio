@@ -467,9 +467,11 @@ p {
 }
 
 .copyright { 
-  position: relative;
+  width: 100%;
+  border-top: 2px solid rgba(0, 0, 0, 0.05);
+  position: absolute;
   bottom: 0;
-  padding: 10px 40px;
+  padding: 20px 40px;
   text-align: center;
 }
 
