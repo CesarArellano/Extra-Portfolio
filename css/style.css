@@ -104,6 +104,10 @@ body {
   z-index: 1;
 }
 
+.dark .main .topbar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
 .main .topbar.active {
   width: 100%;
   left: 0;
@@ -133,6 +137,10 @@ section {
   position: relative;
   min-height: 100vh;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dark section {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .banner {
@@ -196,7 +204,6 @@ p {
 
 .dark .btn {
   background: #2196f3;
-  color: var
 }
 
 .socialMedia {
@@ -224,6 +231,9 @@ p {
   transition: 0.4s ease;
 }
 
+.dark .socialMedia li a {
+  background: #2196f3;
+}
 
 .socialMedia li a:hover {
   background: var(--black);
@@ -232,7 +242,7 @@ p {
 
 .adjust {
   position: relative;
-  min-height: 100vh;
+  min-height: 90vh;
   padding: 0 40px;
   padding-top: 80px;
 }
@@ -277,6 +287,7 @@ p {
 }
 
 .about .content .imgBox img {
+  border-radius: 10px;
   max-width: 100%;
 }
 
@@ -288,6 +299,7 @@ p {
 }
 
 .services .content .serviceBox {
+  border-radius: 10px;
   border: 2px solid rgba(0, 0, 0, 0.05);
   padding: 50px 20px;
   display: flex;
@@ -296,9 +308,16 @@ p {
   flex-direction: column;
 }
 
+.dark .services .content .serviceBox {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
 
 .services .content .serviceBox img {
   max-width: 50px;
+}
+
+.dark .services .content .serviceBox img {
+  filter: invert(1);
 }
 
 .services .content .serviceBox h2 {
@@ -320,6 +339,7 @@ p {
 }
 
 .projects .content .workBox {
+  border-radius: 10px;
   position: relative;
   width: 100%;
   height: 300px;
@@ -379,9 +399,14 @@ p {
 }
 
 .certifications .content .certificationBox {
+  border-radius: 10px;
   border: 2px solid rgba(0, 0, 0, 0.05);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   padding: 20px;
+}
+
+.dark .certifications .content .certificationBox {
+  border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .certifications .content .certificationBox .imgBox {
@@ -414,14 +439,15 @@ p {
   font-weight: 600;
   border-right: 4px solid var(--black);
   padding-right: 10px;
+  color: var(--black);
 }
 
 .certifications .content .certificationBox h4 span {
   text-transform: initial;
   color: #aaa;
   letter-spacing: 1px;
-  font-weight: 300;
-  font-size: 0.7em;
+  font-weight: 400;
+  font-size: 0.8em;
 }
 
 .contact {
@@ -461,9 +487,9 @@ p {
   border: none;
   outline: none;
   color: var(--black);
-  background: var(--white);
+  background: var(--white2);
   font-size: 16px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 2px solid rgba(0, 0, 0, 0.06);
 }
 .contact .contactForm .row2 textarea {
   resize: none;
@@ -496,6 +522,10 @@ p {
   justify-content: center;
 }
 
+.dark .copyright {
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
 /* Dark and light mode switch */
 .themeSwitch {
   position: absolute;
@@ -522,6 +552,10 @@ p {
   font-weight: 300;
   letter-spacing: 1px;
   pointer-events: none;
+}
+
+.dark .themeSwitch::after {
+  content: 'Switch to Light Mode';
 }
 
 .themeSwitch i {
