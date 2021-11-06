@@ -2,6 +2,8 @@ const toggle = document.querySelector('.toggle');
 const topbar = document.querySelector('.topbar');
 const navigation = document.querySelector('.navigation');
 const main = document.querySelector('.main');
+const themeSwitch = document.querySelector('.themeSwitch');
+const body = document.querySelector('body');
 
 toggle.onclick = () => {
   toggle.classList.toggle('active');
@@ -17,3 +19,6 @@ const toggleMenu = () => {
   main.classList.remove('active');
 };
 
+themeSwitch.onclick = () => {
+  body.classList.toggle('dark');
+}

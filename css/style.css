@@ -15,7 +15,15 @@
   --white2: #fff;
 }
 
+.dark {
+  --black: #fff;
+  --black2: #444;
+  --white: #333;
+  --white2: #444;
+}
+
 body {
+  background-color: var(--white);
   overflow-x: hidden;
 }
 
@@ -171,15 +179,24 @@ p {
   color: #777;
 }
 
+.dark p {
+  color: var(--black)
+}
+
 .btn {
   position: relative;
   padding: 10px 30px;
   background: var(--black);
-  color: var(--white);
+  color: #fff;
   font-weight: 400;
   letter-spacing: 1px;
   margin-top: 10px;
   text-decoration: none;
+}
+
+.dark .btn {
+  background: #2196f3;
+  color: var
 }
 
 .socialMedia {
@@ -221,6 +238,7 @@ p {
 }
 
 .title {
+  color: var(--black);
   width: 100%;
   text-align: center;
 }
@@ -477,6 +495,40 @@ p {
   align-items: flex-end;
   justify-content: center;
 }
+
+/* Dark and light mode switch */
+.themeSwitch {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  width: 30px;
+  height: 30px;
+  background: var(--black);
+  color: var(--white);
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.themeSwitch::after {
+  content: 'Switch to Night Mode';
+  position: relative;
+  left: 20px;
+  font-size: 0.8em;
+  color: var(--black);
+  white-space: nowrap;
+  font-weight: 300;
+  letter-spacing: 1px;
+  pointer-events: none;
+}
+
+.themeSwitch i {
+  margin-left: 8px;
+}
+
+
 
 /* === Responsive === */
 
