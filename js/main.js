@@ -9,3 +9,11 @@ toggle.onclick = () => {
   navigation.classList.toggle('active');
   main.classList.toggle('active');
 }
+
+const toggleMenu = () => {
+  toggle.classList.remove('active');
+  topbar.classList.remove('active')
+  navigation.classList.remove('active');
+  main.classList.remove('active');
+};
+
