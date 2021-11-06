@@ -207,9 +207,9 @@ p {
 }
 
 .socialMedia {
-  position: absolute;
-  bottom: 20px;
+  margin-top: 20px;
   display: flex;
+  justify-content: center;
 }
 
 .socialMedia li {
@@ -513,17 +513,10 @@ p {
 
 .copyright { 
   width: 100%;
-  border-top: 2px solid rgba(0, 0, 0, 0.05);
-  position: absolute;
-  bottom: 0;
   padding: 20px 40px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-}
-
-.dark .copyright {
-  border-top: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Dark and light mode switch */
@@ -648,10 +641,11 @@ p {
   }
 
   .contact {
-    margin-bottom: 40px;
+    padding-bottom: 20px;
   }
   
   .copyright {
+    background: var(--white);
     padding: 10px 20px;
   }
 }
